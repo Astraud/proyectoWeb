@@ -1,20 +1,74 @@
 
+/* 
+--------------------------------------------------------------------------------------------------------------
+VIEWPORT -> Es el área útil donde se mostrará la página web == es el área visible sin hacer scroll.
+    vw -> ancho del viewport (1vw = 1% del ancho del viewport)
+    vh -> alto
+    vmax/vmin -> utiliza el valor más grande/más pequeño entre el ancho y el alto del viewport (1vmax = 1% del valor que sea más grande del viewport)
+--------------------------------------------------------------------------------------------------------------
+COLORES ->  La mayoría de las pantallas funcionan con un modo de color aditivo. La suma de RGB da como            resultado blanco. Para ver las palabras clave que representan colores 
+    https://www.w3.org/wiki/CSS/Properties/color/keywords
+    Existe el color "transparent"
+    currentColor -> palabra clave que puede usarse en lugar de cualquier color para que se utilice el valor establecido o heredado en la propiedad color. 
+RGB/RGA -> En el modo RGB tenemos 3 canales (Red, Gree, Blue) y 8 bits de color por canal (cada bit tiene 2       posibles valores 0 ó 1), por lo que tenemos 2^8 posibles valores, desde 0 a 255. Esto da un total de  
+    255*255*255=16.581.375 colores, que se utilizan con una sintaxis (R,G,B), para la gama de grises debemos
+    poner los 3 canales al mismo valor (los 3 en 128 forman el gris puro).
+    El modo rgb nos da la opción de utilizar un cuarto canal (alpha) que corresponde a la transparencia.
+    Su valor va de 0 a 1, y la sintaxis puede ser rgba(R,G,B,A) ó rgb(R G B / A)
+HEXADECIMAL -> Basado en 16 valores (0 al 15) usando dígitos del 0 al 9 y letras de la A a la F. 
+    También necesitamos 256 valores, se compone de 16 caracteres en parejas (16*16=256)    
+    0 1 2 3 4 5 6 A B C D E F 
+    0 1 2 3 4 5 6 A B C D E F 
+    para indicar que lo usamos anteponemos # y a continuación la notación por parejas #RRGGBB
+    cuando una pareja utiliza el mismo valor, puede omitirse el segundo valor, así #ffffff equivale a #fff
+HSL/HSLA -> Es el modo de color más intuitivo: Hue(tono), Saturation(Saturación) y lightness(luminancia)    
+--------------------------------------------------------------------------------------------------------------
+FUENTES -> serif->fuentes con serifas(adornos) sans-serif->sin serifas, recomendables por ser más cómodas al      leer. Pueden utilizarse fuentes desde un servidor remoto que descargamos para usarlas (ej Google fonts).
+    en caso de usar fuentes no genéricas, debemos poner fuentes genéricas de fallback (respaldo).
+    Si utilizamos un font weight asegurarse de tener descargado el grosor que queremos, si no el navegador será el encargado de simular ese número generando una "falsa negrita".
+--------------------------------------------------------------------------------------------------------------
 
+
+*/
+
+
+html{
+    height: 300px;
+}
 
 body{
-    margin: 20px;
+    position: relative;
+    margin: 10px;
+    min-height: 100vh;
     background-color: #333;
-    color: lightgreen;
-    
+    color: aliceblue;
+    font-family: "Roboto", sans-serif; /*si la fuente remota no carga, salta a la siguiente*/
 }
+
+/* p{
+    margin: 0;
+} */
 
 .titulo{
     width: auto;
     margin: 0 20px;
+    text-align: center;
     background-color: green;
+    color: #333;
+    text-shadow: 3px 3px 0 lightgreen;
 }
 
 .fotoPerfil{
     display: block;
     margin: 0px auto;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    color: white;
+    text-align: center;
+    background-color: lightseagreen;
 }
