@@ -36,12 +36,17 @@ html{
     height: 300px;
 }
 
+header{
+    display:flex;
+    justify-content: center;
+}
+
 body{
     position: relative;
     margin: 10px;
     min-height: 100vh;
-    background-color: #333;
-    color: aliceblue;
+    background-color: #fff;
+    color: #333;
     font-family: "Roboto", sans-serif; /*si la fuente remota no carga, salta a la siguiente*/
 }
 
@@ -64,10 +69,10 @@ body{
 }
 
 .footer{
-    position: absolute;
+    position: sticky;
     bottom: 0;
     width: 100%;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     color: white;
     text-align: center;
     background-color: lightseagreen;

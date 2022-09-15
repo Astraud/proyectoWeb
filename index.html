@@ -1,3 +1,9 @@
+
+<!-- 
+div se emplea para agrupar elementos HTML en un bloque, en cambio, span sirve para agrupar dentro de una línea.
+
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -20,29 +26,61 @@
     </header>
 
     <section>
-        <img class="fotoPerfil" src="./images/fotoCVHomero.jpg" alt="fotoPerfil">
-        <p>Fecha de nacimiento: 14/01/1979</p>
-        <p>Domicilio: Reconquista 151 CABA</p>
-        <p>Teléfono 01130722334</p>
-        <p>Email: guillermocarlenaon@gmail.com</p>     
+
+        <img class="fotoPerfil" src="./images/fotoCVHomero.jpg" alt="fotoPerfil" width="200px">
+
+        <div id="datosPersonales" class="borde">
+            <p><span class="datosPersonales">Fecha de nacimiento: </span><span>14/01/1979</span></p>
+            <p><span class="datosPersonales">Domicilio: </span><span>Reconquista 151 CABA</span></p>
+            <p><span class="datosPersonales">Teléfono: </span><span>01130722334</span></p>
+            <p><span class="datosPersonales">Email: </span><span>guillermocarlenaon@gmail.com</span></p>   
+        </div>  
+            
     </section>
 
     <section>    
         <article>
             <h2>Estudios</h2>
-            <ul type="square">
-                <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, qui! Nulla, soluta corrupti. Unde aperiam deleniti doloribus eos iste, consequuntur cumque laudantium praesentium laborum quia odio tempore ipsum asperiores numquam?</li>
-                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, hic vero totam optio nisi sunt harum, modi officiis fugiat, eveniet eos. Quas, velit sint iure ad sit non voluptatibus natus.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat veniam vel numquam ut, amet illum vitae facere magnam eius quaerat hic accusamus repudiandae neque dolores. Impedit cumque ab blanditiis vero?</li>
-            </ul>
+            <ol type="square">
+                <li>Universidad Empresarial Siglo21 - Licenciatura en Informática</li>
+                <li>Universidad de Buenos Aires - Licenciatura en Ciencias Biológicas</li>
+            </ol>
         </article>
 
         <article>
             <h2>Antecedentes Laborales</h2>
-            <ul type="square">
-                <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, laboriosam! Atque odit at, itaque ipsum explicabo pariatur obcaecati vero quae alias natus, officiis enim, quos reiciendis. Ad veritatis eaque sequi!</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat animi eaque id magnam libero minima suscipit? Explicabo sequi, cumque dolores voluptatum sit quos eveniet mollitia consequuntur rem eos, numquam error?</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi in voluptate iusto saepe asperiores, sint quisquam ipsa quod distinctio ex soluta, nisi officiis at porro! Repellat ducimus pariatur molestias recusandae.</li>
+            <ul class="AntecedentesLaborales" type="square">
+                
+                <li class="antecedentes">
+                    <div class="AntImg">  
+                        <img class="FotoAnt" src="./images/Buho.png" alt="" width="50px">
+                    </div>    
+                    <div class="AntText">
+                        <p>Analista MIS y Reporting: Análisis de datos tendientes a mejorar los índices de recupero. Responsablede elaborar reportes y desarrollo de modelos para predecir probabilidad depago en los distintos tramos de mora. Automatización de actualizaciones dedatos para los usuarios, creación de vistas, DTS, calculadores de gestión,campañas. Responsable de la definición y mantenimiento de los datosrelacionales / calidad de datos, identificación de datos críticos y definición delos riesgos asociados. Implementación de acciones para mejorar la calidad enorigen (análisis de riesgo y armado de mitigantes y planes de contingencia).Desarrollo de modelos necesarios para apoyar los informes y coordinacióncon otras áreas.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="antecedentes">
+                    <div class="AntImg">  
+                        <img class="FotoAnt" src="./images/Buho.png" alt="" width="50px">
+                    </div>    
+                    <div class="AntText">
+                        <p>Banco hipotecario, supervision de agencias de cobranza: Supervisión de Agencias de Cobranza extrajudicial externas al Banco, seguimiento y revisión de cobranzas y gestión, auditorías. Implementación de campañas especiales para el recupero de la cartera.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="antecedentes">
+                    <div class="AntImg">  
+                        <img class="FotoAnt" src="./images/uba.jpg" alt="" width="50px">
+                    </div>    
+                    <div class="AntText">
+                        <p>Auxiliar en Laboratorio de Entomología Experimental (UBA-Ciudad Universitaria): Preparación y catalogado de especímenes, medición y recopilación de datos. <a href="https://www.ege.fcen.uba.ar/investigacion/grupo-de-investigacion-en-ecofisiologia-de-parasitoides-giep/">LLE</a>
+                        </p>
+                    </div>
+                </li>
+
             </ul>
         </article>     
         
